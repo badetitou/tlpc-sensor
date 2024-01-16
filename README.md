@@ -1,10 +1,11 @@
 # Time-Lapse Performance Counters (TLPC) Sensor
 
-TLPC-sensor aims at providing an API to measure various Performance Counters, such as the number of executed intructions and cycles, or energy consumption (with RAPL) in a time-lapse, designed by the call of the function `start()` and `stop()`.
+TLPC-sensor aims at providing an API to measure various Performance Counters, such as the number of executed instructions and cycles, or energy consumption (with RAPL) in a time-lapse, designed by the call of the function `start()` and `stop()`.
 
 ## Install
 
 You need to install [libpfm4](https://github.com/gfieni/libpfm4)
+
 Then, you can run:
 ```sh
 git clone http://github.com/davidson-consulting/tlpc-sensor.git
@@ -14,7 +15,7 @@ make
 ./tlpc-sensor
 ```
 
-You need sudo priviliege and run `echo -1 > /proc/sys/kernel/perf_event_paranoid`.
+You need sudo privilege and run `echo -1 > /proc/sys/kernel/perf_event_paranoid`.
 
 ## How to use
 
@@ -22,7 +23,7 @@ You need sudo priviliege and run `echo -1 > /proc/sys/kernel/perf_event_paranoid
 
 ## Running example
 
-After installing and building `tlpc-sensor`, run it as follow:
+After installing and building `tlpc-sensor`, run it as follows:
 
 ```sh
 $ ./tlpc-sensor
@@ -84,8 +85,8 @@ Then, in `build/report_c.json`, you can observe the result:
 }
 ```
 
-The records `loop1` and `loop2` are successive loops of `10000` iterations and the record `main` wrap both loops.
-Here, the consumption of `main` should be way more high than the two others, while the records of the loops should be similar.
+The records `loop1` and `loop2` are successive loops of `10000` iterations and the record `main` wraps both loops.
+Here, the consumption of `main` should be way higher than the two others, while the records of the loops should be similar.
 
 You can play with the number of iterations of the loop to see the impact on the counters.
 
